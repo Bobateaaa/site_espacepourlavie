@@ -1,0 +1,169 @@
+@charset "utf-8";
+
+:root {
+ --couleur-btn-billet-planifier: #F4EFEC;
+ --couleur-btn-shadow: #A79387;
+ --couleur-btn-texte: #594836;
+
+ --couleur-main-accueil-1: #F4F0EC;
+ --couleur-main-accueil-2: #DCC1B0;
+ --couleur-footer-background: #DCC1B0;
+ 
+}
+
+/* 
+________________________________________________________
+
+GENERAL
+________________________________________________________
+
+*/
+
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  border: 2px solid rgb(64, 22, 63) !important;
+}
+
+section {
+  width: 100vw;
+  height: 100vh;
+}
+
+
+h2 {
+  font-family: "Asap", serif;
+  font-optical-sizing: auto;
+  font-weight: 700; /* Replace <weight> with a specific value */
+  font-style: normal;
+  font-variation-settings: "wdth" 125;
+  font-size: 3em;
+}
+
+p {
+  font-family: "Afacad", sans-serif;
+  font-optical-sizing: auto;
+  font-weight: 500;
+  font-style: normal;
+}
+
+/* 
+________________________________________________________
+
+SECTION DEBUT :))))
+________________________________________________________
+
+*/
+
+.accueil_debut {
+  background-image: url('images/0001.webp');
+  background-size: cover; 
+  background-position: center; 
+
+  display: flex;
+  justify-content: center; 
+  align-items: center;
+}
+
+.accueil_debut div {
+  /* background-color: rgb(226, 208, 198); */
+
+  width: 70vw;
+  height: 45vh;
+  
+  display: grid;
+  grid-template-rows: 0.3fr 0.5fr 1fr;
+}
+
+.bouton1 {
+  background-color: #F4EFEC;
+  color: #594836;
+
+  font-size: 22px;
+  font-weight: bolder;
+  font-family: "Inter", Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+  border-radius: 5px;
+  padding: 0.5em 1em;
+
+  text-align: center;
+  cursor: pointer;
+}	
+
+.span_bouton_espace {
+  display: flex;
+  flex-flow: column nowrap;
+  align-items: center;
+  justify-content: center;
+}
+
+/* 
+________________________________________________________
+
+SECTION QUI SOMMES-NOUS :))))
+________________________________________________________
+
+*/
+
+.accueil_propos {
+  background-color: var(--couleur-main-accueil-1);
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+}
+
+.accueil_propos h2 {
+  font-size: 52px;
+}
+
+.accueil_propos_image img {
+  width: 230px;
+  height: 103px;
+}
+
+
+/* 
+________________________________________________________
+
+SECTION EVENEMENT :))))
+________________________________________________________
+
+*/
+
+.accueil_evenement {
+  background-color: var(--couleur-main-accueil-2);
+  display: grid;
+  grid-template-rows: 0.2fr 1fr;
+}
+
+.accueil_evenement span {
+  display: flex;
+  flex-flow: column nowrap;
+  align-items: center;
+  justify-content: center;
+}
+
+/* 
+________________________________________________________
+
+SECTION ENFANTS, ENSEIGNER ET FAIRE UN DIFFERENCE :))))
+________________________________________________________
+
+*/
+
+.accueil_autre {
+  background-color: var(--couleur-main-accueil-1);
+
+  display: flex;
+  flex-flow: row nowrap;
+  align-items: center;
+  justify-content: center;
+  
+}
+
+.accueil_autre article {
+  display: flex;
+  flex-flow: column wrap;
+  align-items: center;
+  justify-content: center;
+}

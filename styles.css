@@ -24,22 +24,26 @@ ________________________________________________________
   margin: 0;
   padding: 0;
   box-sizing: border-box;
-  border: 2px solid rgb(64, 22, 63) !important;
+  border: 1px solid rgb(255, 0, 0);
+}
+
+html {
+  scroll-snap-stop: always;
 }
 
 section {
   width: 100vw;
-  height: 100vh;
+  height: 80vh;
 }
 
 
 h2 {
   font-family: "Asap", serif;
   font-optical-sizing: auto;
-  font-weight: 700; /* Replace <weight> with a specific value */
+  font-weight: 750; /* Replace <weight> with a specific value */
   font-style: normal;
   font-variation-settings: "wdth" 125;
-  font-size: 3em;
+  font-size: 4em;
 }
 
 p {
@@ -47,6 +51,7 @@ p {
   font-optical-sizing: auto;
   font-weight: 500;
   font-style: normal;
+  font-size: 1.3em;
 }
 
 /* 
@@ -56,29 +61,61 @@ SECTION DEBUT :))))
 ________________________________________________________
 
 */
+@keyframes backgroundAnimStart {
+  0% {
+    background-image: url('images/stadeolympique.jpg');
+  }
+  25% {
+    background-image: url('images/biosphere.jpeg');
+  }
+  50% {
+    background-image: url('images/insectarium.jpg');
+  }
+  75% {
+    background-image: url('images/planetarium.jpg');
+  }
+  100% {
+    background-image: url('images/jardinbotanique.jpeg');
+  }
+  
+}
 
 .accueil_debut {
-  background-image: url('images/0001.webp');
   background-size: cover; 
   background-position: center; 
+  height: 90vh;
+  background-color: var(--couleur-main-accueil-1);
+
+
 
   display: flex;
-  justify-content: center; 
-  align-items: center;
+  backdrop-filter: brightness(10%);
 }
+
+.background-animation {
+  animation: backgroundAnimStart 40s ease-in-out infinite;
+  filter: brightness(70%);
+  background-size: cover;
+  background-position: center;
+  position: absolute;
+  z-index: -1;
+}
+
 
 .accueil_debut div {
   /* background-color: rgb(226, 208, 198); */
 
-  width: 70vw;
-  height: 45vh;
+  width: 100vw;
+  height: 90vh;
+  border-radius: 5px;
+  box-shadow: inset 0 -30px 100px -10px rgba(0, 0, 0, 0.5); 
   
   display: grid;
   grid-template-rows: 0.3fr 0.5fr 1fr;
 }
 
 .bouton1 {
-  background-color: #F4EFEC;
+  background-color: #ffffff;
   color: #594836;
 
   font-size: 22px;
@@ -98,6 +135,14 @@ ________________________________________________________
   justify-content: center;
 }
 
+h1 {
+  font-size: 72px;
+  font-family: "Inter", Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+  font-weight: bolder;
+  color: #ededed;
+  text-align: center;
+}
+
 /* 
 ________________________________________________________
 
@@ -109,16 +154,119 @@ ________________________________________________________
 .accueil_propos {
   background-color: var(--couleur-main-accueil-1);
   display: grid;
-  grid-template-columns: 1fr 1fr;
-}
-
-.accueil_propos h2 {
-  font-size: 52px;
+  grid-template-columns: 0.7fr 1fr;
 }
 
 .accueil_propos_image img {
-  width: 230px;
-  height: 103px;
+  width: auto;
+  height: 13vw;
+  display: block;
+  margin: 0 auto;
+  border: 7px solid #ece1d5;
+  border-width: 7px 7px 37px 7px;
+  box-shadow: 2px 4px 7px 1px #373431, 8px 12px 0px 4px var(--couleur-main-accueil-2);
+}
+
+.accueil_propos_image figure:first-child img{
+  position: relative;
+  right: 11%;
+  z-index: 1;
+  bottom: 3%;
+  height: 26vh;
+  transform: rotate(-13deg);
+}
+
+.accueil_propos_image figure:first-child figcaption {
+  width: fit-content;
+  position: relative;
+  z-index: 2;
+
+  bottom: 3.5vh;
+  left: 11.5vw;
+
+  transform: rotate(-13deg);
+}
+
+
+.accueil_propos_image figure:nth-child(2) img {
+  position: relative;
+  left: 11%;
+  bottom: 5%;
+  z-index: 1;
+  height: 33vh;
+  transform: rotate(15deg);
+  transform-origin: center;
+}
+.accueil_propos_image figure:nth-child(2) figcaption {
+  width: fit-content;
+  position: relative;
+  z-index: 2;
+
+  left: 19.5vw;
+  bottom: 3.8vh;
+  
+  transform: rotate(15deg);
+  transform-origin: center;
+}
+
+.accueil_propos_image figure:nth-child(3) img {
+  position: relative;
+  z-index: 1;
+  right: 16%;
+  height: 20vh;
+  transform: rotate(-23deg);
+  transform-origin: center;
+}
+.accueil_propos_image figure:nth-child(3) figcaption {
+  width: fit-content;
+  position: relative;
+  z-index: 2;
+
+  bottom: 3.5vh;
+  left: 10vw;
+  
+  transform: rotate(-23deg);
+  transform-origin: center;
+}
+
+.accueil_propos_image figure:nth-child(4) img {
+  position: relative;
+  z-index: 1;
+  right: 16%;
+  height: 15vh;
+  transform: rotate(37deg);
+  transform-origin: center;
+}
+.accueil_propos_image figure:nth-child(4) figcaption {
+  width: fit-content;
+  position: relative;
+  z-index: 2;
+
+  left: 8.3vw;
+  bottom: 4vh;
+  transform: rotate(37deg);
+  transform-origin: center;
+
+  font-size: 1em;
+}
+
+figcaption {
+  font-family: "Caveat", cursive;
+  font-optical-sizing: auto;
+  font-weight: 550;
+  font-style: normal;
+  font-size: 1.22em;
+}
+
+.acceuil_propos_description {
+  display: flex;
+  flex-flow: column wrap;
+  justify-content: center;
+  align-items: flex-end;
+  text-align: right;
+  transform: translate(0%, -13%);
+  gap: 5%;
+  margin: 0% 10% 0% 0%;
 }
 
 
@@ -134,6 +282,7 @@ ________________________________________________________
   background-color: var(--couleur-main-accueil-2);
   display: grid;
   grid-template-rows: 0.2fr 1fr;
+  padding: 5% 0% 5% 0%;
 }
 
 .accueil_evenement span {
@@ -141,7 +290,79 @@ ________________________________________________________
   flex-flow: column nowrap;
   align-items: center;
   justify-content: center;
+  gap: 2%;
+
+  margin-bottom: 10vh;
 }
+
+.accueil_evenement div article > img {
+  width: calc(20vw - 30px);
+  height: auto;
+  margin-bottom: 10px;
+}
+
+.description-evenement {
+  overflow: auto;
+  height: 100px;
+  scrollbar-width: thin;
+  scroll-behavior: smooth;
+}
+
+.accueil_evenement article {
+  background-color: #b39380c9;
+  display: flex;
+  flex-flow: column nowrap;
+  align-items: flex-start;
+
+  width: 20vw;
+  height: auto;
+  padding: 15px 15px 15px 15px;
+  text-align: left;
+}
+
+.accueil_evenement article p:nth-child(3) {
+  font-size: 22px;
+  font-weight: bold;
+  margin-top: 15px;
+  margin-bottom: 7px;
+}
+
+.accueil_evenement article p:nth-child(4){
+  margin-bottom: 10px;
+
+}
+.accueil_evenement article p:nth-child(4){
+  margin-bottom: 10px;
+
+}
+
+.description-evenement {
+  font-size: 1em;
+}
+
+.accueil_evenement div {
+  display: flex;
+  flex-flow: row nowrap;
+  gap: 30px;
+  
+}
+
+.description-evenement {
+  overflow: auto;
+  height: 100px; /* Adjust the height as needed */
+}
+
+
+.description-evenement {
+  scrollbar-width: thin; 
+  scrollbar-color: #786458 #b39380c9; 
+}
+
+.accueil_evenement div {
+  overflow: hidden;
+  
+}
+
 
 /* 
 ________________________________________________________

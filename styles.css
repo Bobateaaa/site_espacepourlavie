@@ -12,11 +12,10 @@
 }
 
 /* 
-________________________________________________________
+___________________________________________________
 
 GENERAL
 ________________________________________________________
-
 */
 
 
@@ -24,15 +23,15 @@ ________________________________________________________
   margin: 0;
   padding: 0;
   box-sizing: border-box;
-  border: 1px solid rgb(255, 0, 0);
+  border: 2px solid rgb(255, 0, 0);
 }
 
 html {
-  scroll-snap-stop: always;
+  scroll-behavior: smooth;
 }
 
 section {
-  width: 100vw;
+  width: 99vw !important;
   height: 80vh;
 }
 
@@ -65,54 +64,64 @@ ________________________________________________________
   0% {
     background-image: url('images/stadeolympique.jpg');
   }
+  22% {
+    background-image: url('images/stadeolympique.jpg');
+  }
   25% {
+    background-image: url('images/biosphere.jpeg');
+  }
+  47% {
     background-image: url('images/biosphere.jpeg');
   }
   50% {
     background-image: url('images/insectarium.jpg');
   }
+  72% {
+    background-image: url('images/insectarium.jpg');
+  }
   75% {
+    background-image: url('images/planetarium.jpg');
+  }
+  97% {
     background-image: url('images/planetarium.jpg');
   }
   100% {
     background-image: url('images/jardinbotanique.jpeg');
   }
-  
 }
 
 .accueil_debut {
   background-size: cover; 
   background-position: center; 
-  height: 90vh;
+  height: 100vh;
   background-color: var(--couleur-main-accueil-1);
-
-
+  background-color: #1f1c1c;
 
   display: flex;
-  backdrop-filter: brightness(10%);
-}
+  flex-flow: row nowrap;
+  justify-content: center;
+  align-items: end;
+  gap: 30%;
+  padding: 10%;
 
-.background-animation {
-  animation: backgroundAnimStart 40s ease-in-out infinite;
-  filter: brightness(70%);
-  background-size: cover;
-  background-position: center;
-  position: absolute;
-  z-index: -1;
+  animation: backgroundAnimStart 30s ease-out infinite;
 }
-
 
 .accueil_debut div {
-  /* background-color: rgb(226, 208, 198); */
-
-  width: 100vw;
-  height: 90vh;
-  border-radius: 5px;
-  box-shadow: inset 0 -30px 100px -10px rgba(0, 0, 0, 0.5); 
-  
-  display: grid;
-  grid-template-rows: 0.3fr 0.5fr 1fr;
+  padding: 40px 40px 40px 40px;
+  background-color: rgb(45, 45, 45);
+  height: 58vh;
+  border-radius: 10px;
 }
+
+.accueil_debut div p:first-child {
+  margin-bottom: 8vh;
+}
+
+.accueil_debut p {
+  color: var(--couleur-main-accueil-2);
+}
+
 
 .bouton1 {
   background-color: #ffffff;
@@ -132,17 +141,23 @@ ________________________________________________________
   display: flex;
   flex-flow: column nowrap;
   align-items: center;
-  justify-content: center;
+
+  margin-top: 3vh;
 }
+
 
 h1 {
-  font-size: 72px;
-  font-family: "Inter", Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+  font-size: 8em;
+  font-family: Helvetica, "Inter", Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
   font-weight: bolder;
-  color: #ededed;
-  text-align: center;
+  color: var(--couleur-main-accueil-1);
+  
+  text-align: left;
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5)
 }
 
+
+  
 /* 
 ________________________________________________________
 
@@ -213,7 +228,7 @@ ________________________________________________________
   position: relative;
   z-index: 1;
   right: 16%;
-  height: 20vh;
+  height: 23vh;
   transform: rotate(-23deg);
   transform-origin: center;
 }
@@ -279,6 +294,7 @@ ________________________________________________________
 */
 
 .accueil_evenement {
+  height: 100vh;
   background-color: var(--couleur-main-accueil-2);
   display: grid;
   grid-template-rows: 0.2fr 1fr;
@@ -303,7 +319,7 @@ ________________________________________________________
 
 .description-evenement {
   overflow: auto;
-  height: 100px;
+  height: 300px;
   scrollbar-width: thin;
   scroll-behavior: smooth;
 }
@@ -313,9 +329,10 @@ ________________________________________________________
   display: flex;
   flex-flow: column nowrap;
   align-items: flex-start;
+  
 
   width: 20vw;
-  height: auto;
+  height: 50vh;
   padding: 15px 15px 15px 15px;
   text-align: left;
 }
@@ -343,13 +360,15 @@ ________________________________________________________
 .accueil_evenement div {
   display: flex;
   flex-flow: row nowrap;
+  justify-content: center;
+  align-items: center;
   gap: 30px;
   
 }
 
 .description-evenement {
   overflow: auto;
-  height: 100px; /* Adjust the height as needed */
+  height: 500px;
 }
 
 
@@ -379,6 +398,9 @@ ________________________________________________________
   flex-flow: row nowrap;
   align-items: center;
   justify-content: center;
+
+  padding: 5% 10% 5% 10%;
+  gap: 5%;
   
 }
 
@@ -386,5 +408,40 @@ ________________________________________________________
   display: flex;
   flex-flow: column wrap;
   align-items: center;
-  justify-content: center;
+  justify-content: flex-start;
+
+  width: 20vw;
+}
+
+.accueil_autre h2 {
+  font-size: 2.5em;
+  margin-bottom: 20px;
+}
+
+.accueil_autre article p {
+  font-size: 1.2em;
+  margin-bottom: 50px;
+}
+
+.bouton2 {
+  background-color: #ffa719;
+  color: #1f1c1c;
+
+  font-size: 20px;
+  font-weight: bolder;
+  font-family: "Inter", Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+  border-radius: 5px;
+  padding: 0.5em 1em;
+
+  text-align: center;
+  cursor: pointer;
+  
+  
+}
+
+.ligne-verticale {
+  width: 5px; /* Set a fixed width for the line */
+  height: 80%; /* Height of the line */
+  background-color: black; /* Color of the line */
+  border-radius: 10px; /* Optional: round the corners */
 }

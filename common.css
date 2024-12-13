@@ -1,0 +1,154 @@
+@charset "utf-8";
+
+/* 
+________________________________________________________
+
+NAVIGATION
+________________________________________________________
+*/
+header {
+  display: flex;
+  flex-flow: row nowrap;
+  justify-content: space-between;
+
+  background-color: #F4EFEC;
+  padding: 0% 2% 0% 1%;
+
+  position: fixed;
+  width: 100%;
+  z-index: 10;
+
+}
+
+nav {
+  display: flex;
+  flex-flow: row nowrap;
+  justify-content: space-between;
+  align-items: center;
+  width: 57%;
+}
+
+header a{
+  font-family: "Inter", sans-serif;
+  font-optical-sizing: auto;
+  font-weight: 600;
+  font-style: normal;
+  font-size: clamp(0.5em, 1.2vw, 0.9em);
+  color: #74583a;
+}
+
+nav a{
+  display: flex;
+  flex-direction: row nowrap;
+  align-items: center;
+  text-decoration: none;
+  flex-grow: 1;
+  height: 100%;
+  padding: 0% 5% 0% 5%;
+
+  transition: color 0.3s ease, text-shadow 0.3s ease;
+}
+
+
+nav span{
+  height: 100%;
+  display: flex;
+  flex-direction: row nowrap;
+  align-items: center;
+}
+
+nav{
+  display: inline;
+  display: flex;
+  flex-direction: row nowrap;
+
+  justify-content: space-between;
+  align-items: center;
+}
+
+nav span:nth-of-type(2){
+  display: flex;
+  flex-direction: row nowrap;
+  align-items: center;
+  gap: 20px;
+
+  opacity: 0.5;
+}
+
+
+nav span:nth-of-type(2) img{
+  width: 25px;
+  height: auto;
+}
+
+nav span:nth-of-type(2) img:nth-child(2){
+  width: 35px;
+  height: auto;
+}
+
+nav span p{
+  font-size: 35px;
+}
+
+.jardin_nav {
+  white-space: nowrap;
+}
+
+#logo_espace_nav {
+  width: 150px;
+  height: auto;
+
+}
+
+.accueil_nav:hover {
+  color: #8d704b; 
+  text-shadow: 0 0 29px rgba(210, 180, 140, 1),
+               0 0 39px rgba(210, 180, 140, 0.9),
+               0 0 55px rgba(210, 180, 140, 0.8);
+}
+
+.biodome_nav:hover{
+  color: #2db1e5;
+  text-shadow: 0 0 29px rgb(58, 186, 237), 
+               0 0 39px rgba(82, 174, 210, 0.6), 
+               0 0 55px rgba(58, 187, 237, 0.4); 
+}
+
+.biosphere_nav:hover {
+  color: #00879E;
+  text-shadow: 0 0 29px rgba(0, 135, 158), 
+               0 0 39px rgba(0, 135, 158, 0.6), 
+               0 0 55px rgba(0, 135, 158, 0.4); 
+}
+
+.insectarium_nav:hover {
+  color: #E84C2E;
+  text-shadow: 0 0 29px rgba(232, 76, 46), /* Horizontal and vertical shadow */
+               0 0 39px rgba(232, 76, 46, 0.6), /* Larger shadow */
+               0 0 55px rgba(232, 76, 46, 0.4); /* Even larger shadow */
+}
+
+.jardin_nav:hover {
+  color: #42B876;
+  text-shadow: 0 0 29px rgba(66, 184, 118, 0.8), /* Horizontal and vertical shadow */
+               0 0 39px rgba(66, 184, 118, 0.6), /* Larger shadow */
+               0 0 55px rgba(66, 184, 118, 0.4); /* Even larger shadow */
+}
+
+.planetarium_nav:hover {
+  color: #282992;
+  text-shadow: 0 0 29px rgba(40, 41, 146, 0.8), /* Horizontal and vertical shadow */
+               0 0 39px rgba(40, 41, 146, 0.6), /* Larger shadow */
+               0 0 55px rgba(40, 41, 146, 0.4); /* Even larger shadow */
+}
+
+@media screen and (max-width: 580px) {
+  nav span, nav img, nav p {
+    display: none;
+  }
+
+  header {
+    background-color: #F4EFEC;
+  }
+
+}

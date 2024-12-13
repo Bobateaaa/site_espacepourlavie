@@ -1,0 +1,526 @@
+@charset "utf-8";
+
+:root {
+ --couleur-btn-billet-planifier: #F4EFEC;
+ --couleur-btn-shadow: #A79387;
+ --couleur-btn-texte: #594836;
+
+ --couleur-main-accueil-1: #F4F0EC;
+ --couleur-main-accueil-2: #DCC1B0;
+ --couleur-footer-background: #DCC1B0;
+ 
+}
+
+/* 
+___________________________________________________
+
+GENERAL
+________________________________________________________
+*/
+
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  border: 2px solid rgb(255, 0, 0);
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+section {
+  width: 99vw !important;
+  height: 80vh;
+}
+
+
+h2 {
+  font-family: "Asap", serif;
+  font-optical-sizing: auto;
+  font-weight: 750; /* Replace <weight> with a specific value */
+  font-style: normal;
+  font-variation-settings: "wdth" 125;
+  font-size: 4em;
+}
+
+p {
+  font-family: "Afacad", sans-serif;
+  font-optical-sizing: auto;
+  font-weight: 500;
+  font-style: normal;
+  font-size: 1.3em;
+}
+
+/* 
+________________________________________________________
+
+SECTION DEBUT :))))
+________________________________________________________
+
+*/
+@keyframes backgroundAnimStart {
+  0% {
+    background-image: url('images/stadeolympique.jpg');
+  }
+  22% {
+    background-image: url('images/stadeolympique.jpg');
+  }
+  25% {
+    background-image: url('images/biosphere.jpeg');
+  }
+  47% {
+    background-image: url('images/biosphere.jpeg');
+  }
+  50% {
+    background-image: url('images/insectarium.jpg');
+  }
+  72% {
+    background-image: url('images/insectarium.jpg');
+  }
+  75% {
+    background-image: url('images/planetarium.jpg');
+  }
+  97% {
+    background-image: url('images/planetarium.jpg');
+  }
+  100% {
+    background-image: url('images/jardinbotanique.jpeg');
+  }
+}
+
+.accueil_debut {
+  background-size: cover; 
+  background-position: center; 
+  height: 100vh;
+  background-color: var(--couleur-main-accueil-1);
+  background-color: #1f1c1c;
+
+  display: flex;
+  flex-flow: row nowrap;
+  justify-content: center;
+  align-items: end;
+  gap: 30%;
+  padding: 10%;
+
+  animation: backgroundAnimStart 30s ease-out infinite;
+}
+
+.accueil_debut .accueil_debut_content {
+  padding: 40px 40px 40px 40px;
+  background-color: rgb(45, 45, 45);
+  height: 58vh;
+  border-radius: 10px;
+
+  display: flex;
+  flex-flow: column nowrap;
+  justify-content: space-between;
+}
+
+
+.accueil_debut p {
+  color: var(--couleur-main-accueil-2);
+}
+
+
+.bouton1 {
+  background-color: #ffffff;
+  color: #594836;
+
+  font-size: 22px;
+  font-weight: bolder;
+  font-family: "Inter", Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+  border-radius: 5px;
+  padding: 0.5em 1em;
+
+  text-align: center;
+  cursor: pointer;
+}	
+
+.span_bouton_espace {
+  display: flex;
+  flex-flow: column nowrap;
+  align-items: center;
+
+  margin-top: 3vh;
+}
+
+
+h1 {
+  font-size: 8em;
+  font-family: Helvetica, "Inter", Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+  font-weight: bolder;
+  color: var(--couleur-main-accueil-1);
+  
+  text-align: left;
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5)
+}
+
+
+  
+/* 
+________________________________________________________
+
+SECTION QUI SOMMES-NOUS :))))
+________________________________________________________
+
+*/
+
+.accueil_propos {
+  background-color: var(--couleur-main-accueil-1);
+  display: grid;
+  grid-template-columns: 0.7fr 1fr;
+}
+
+.accueil_propos_image img {
+  width: auto;
+  height: 13vw;
+  display: block;
+  margin: 0 auto;
+  border: 7px solid #ece1d5;
+  border-width: 7px 7px 37px 7px;
+  box-shadow: 2px 4px 7px 1px #373431, 8px 12px 0px 4px var(--couleur-main-accueil-2);
+}
+
+.accueil_propos_image figure:first-child img{
+  position: relative;
+  right: 11%;
+  z-index: 1;
+  bottom: 3%;
+  height: 26vh;
+  transform: rotate(-13deg);
+}
+
+.accueil_propos_image figure:first-child figcaption {
+  width: fit-content;
+  position: relative;
+  z-index: 2;
+
+  bottom: 3.5vh;
+  left: 11.5vw;
+
+  transform: rotate(-13deg);
+}
+
+
+.accueil_propos_image figure:nth-child(2) img {
+  position: relative;
+  left: 11%;
+  bottom: 5%;
+  z-index: 1;
+  height: 33vh;
+  transform: rotate(15deg);
+  transform-origin: center;
+}
+.accueil_propos_image figure:nth-child(2) figcaption {
+  width: fit-content;
+  position: relative;
+  z-index: 2;
+
+  left: 19.5vw;
+  bottom: 3.8vh;
+  
+  transform: rotate(15deg);
+  transform-origin: center;
+}
+
+.accueil_propos_image figure:nth-child(3) img {
+  position: relative;
+  z-index: 1;
+  right: 16%;
+  height: 23vh;
+  transform: rotate(-23deg);
+  transform-origin: center;
+}
+.accueil_propos_image figure:nth-child(3) figcaption {
+  width: fit-content;
+  position: relative;
+  z-index: 2;
+
+  bottom: 3.5vh;
+  left: 10vw;
+  
+  transform: rotate(-23deg);
+  transform-origin: center;
+}
+
+.accueil_propos_image figure:nth-child(4) img {
+  position: relative;
+  z-index: 1;
+  right: 16%;
+  height: 15vh;
+  transform: rotate(37deg);
+  transform-origin: center;
+}
+.accueil_propos_image figure:nth-child(4) figcaption {
+  width: fit-content;
+  position: relative;
+  z-index: 2;
+
+  left: 8.3vw;
+  bottom: 4vh;
+  transform: rotate(37deg);
+  transform-origin: center;
+
+  font-size: 1em;
+}
+
+figcaption {
+  font-family: "Caveat", cursive;
+  font-optical-sizing: auto;
+  font-weight: 550;
+  font-style: normal;
+  font-size: 1.22em;
+}
+
+.acceuil_propos_description {
+  display: flex;
+  flex-flow: column wrap;
+  justify-content: center;
+  align-items: flex-end;
+  text-align: right;
+  transform: translate(0%, -13%);
+  gap: 5%;
+  margin: 0% 10% 0% 0%;
+}
+
+
+/* 
+________________________________________________________
+
+SECTION EVENEMENT :))))
+________________________________________________________
+
+*/
+
+.accueil_evenement {
+  height: 100vh;
+  background-color: var(--couleur-main-accueil-2);
+  display: grid;
+  grid-template-rows: 0.2fr 1fr;
+  padding: 5% 0% 5% 0%;
+}
+
+.accueil_evenement span {
+  display: flex;
+  flex-flow: column nowrap;
+  align-items: center;
+  justify-content: center;
+  gap: 2%;
+
+  margin-bottom: 10vh;
+}
+
+.accueil_evenement div article > img {
+  width: calc(20vw - 30px);
+  height: auto;
+  margin-bottom: 10px;
+}
+
+.description-evenement {
+  overflow: auto;
+  height: 300px;
+  scrollbar-width: thin;
+  scroll-behavior: smooth;
+}
+
+.accueil_evenement article {
+  background-color: #b39380c9;
+  display: flex;
+  flex-flow: column nowrap;
+  align-items: flex-start;
+  
+
+  width: 20vw;
+  height: 50vh;
+  padding: 15px 15px 15px 15px;
+  text-align: left;
+}
+
+.accueil_evenement article p:nth-child(3) {
+  font-size: 22px;
+  font-weight: bold;
+  margin-top: 15px;
+  margin-bottom: 7px;
+}
+
+.accueil_evenement article p:nth-child(4){
+  margin-bottom: 10px;
+
+}
+.accueil_evenement article p:nth-child(4){
+  margin-bottom: 10px;
+
+}
+
+.description-evenement {
+  font-size: 1em;
+}
+
+.accueil_evenement div {
+  display: flex;
+  flex-flow: row nowrap;
+  justify-content: center;
+  align-items: center;
+  gap: 30px;
+  
+}
+
+.description-evenement {
+  overflow: auto;
+  height: 500px;
+}
+
+
+.description-evenement {
+  scrollbar-width: thin; 
+  scrollbar-color: #786458 #b39380c9; 
+}
+
+.accueil_evenement div {
+  overflow: hidden;
+  
+}
+
+
+/* 
+________________________________________________________
+
+SECTION ENFANTS, ENSEIGNER ET FAIRE UN DIFFERENCE :))))
+________________________________________________________
+
+*/
+
+.accueil_autre {
+  background-color: var(--couleur-main-accueil-1);
+
+  display: flex;
+  flex-flow: row nowrap;
+  align-items: center;
+  justify-content: center;
+
+  padding: 5% 10% 5% 10%;
+  gap: 5%;
+  
+}
+
+.accueil_autre article {
+  display: flex;
+  flex-flow: column wrap;
+  align-items: center;
+  justify-content: flex-start;
+
+  width: 20vw;
+}
+
+.accueil_autre h2 {
+  font-size: 2.5em;
+  margin-bottom: 20px;
+}
+
+.accueil_autre article p {
+  font-size: 1.2em;
+  margin-bottom: 50px;
+}
+
+.bouton2 {
+  background-color: #ffa719;
+  color: #1f1c1c;
+
+  font-size: 20px;
+  font-weight: bolder;
+  font-family: "Inter", Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+  border-radius: 5px;
+  padding: 0.5em 1em;
+
+  text-align: center;
+  cursor: pointer;
+  
+  
+}
+
+.ligne-verticale {
+  width: 5px; 
+  height: 80%; 
+  background-color: black; 
+  border-radius: 10px; 
+}
+
+/* 
+______________________________________________________________________________________________________________________________________________________
+
+Mobile
+_______________________________________________________________________________________________________________________________________________
+
+*/
+
+@media screen and (max-width: 576px){
+
+/* 
+________________________________________________________
+
+SECTION DEBUT :))))
+________________________________________________________
+*/
+
+  .accueil_debut h1 {
+    display: none;
+  }
+
+  .accueil_debut .accueil_debut_content p:nth-child(1){
+    display: none;
+  }
+
+
+
+
+
+/* 
+________________________________________________________
+
+SECTION QUI SOMMES NOUS :))))
+________________________________________________________
+*/
+
+  .accueil_propos_image {
+    display: none;
+  }
+
+  .acceuil_propos_description {
+    transform: none;
+    margin: 0% 0%;
+  }
+
+  .acceuil_propos_description h2, .acceuil_propos_description p {
+    text-align: center;
+  }
+
+  .accueil_propos {
+    grid-template-columns: 1fr;
+  }
+
+/* 
+________________________________________________________
+
+SECTION EVENEMENT :))))
+________________________________________________________
+*/
+
+.accueil_evenement span p {
+  text-align: center;
+}
+
+/* 
+________________________________________________________
+
+SECTION ENFANTS ENSIEGNANT SE DOCUMENTER FAIRE UNE DIFFERENCE :))))
+________________________________________________________
+*/
+  .accueil_autre{
+    flex-flow: column nowrap;
+    height: fit-content;
+  }
+}
+
+

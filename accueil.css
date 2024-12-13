@@ -1,0 +1,1035 @@
+/* Author: Matilda Kang */
+/* Desc: CSS pour la page d'accueil d'Espace pour la vie mobile et desktop */
+
+@charset "utf-8";
+
+
+:root {
+ --couleur-btn-billet-planifier: #F4EFEC;
+ --couleur-btn-shadow: #A79387;
+ --couleur-btn-texte: #594836;
+
+ --couleur-main-accueil-1: #F4F0EC;
+ --couleur-main-accueil-2: #DCC1B0;
+ --couleur-footer-background: #DCC1B0;
+ 
+}
+
+/* 
+___________________________________________________
+
+GENERALE
+________________________________________________________
+*/
+
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  border: 2px solid rgb(255, 0, 0);
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+section {
+  width: 100% !important;
+  height: 80vh;
+}
+
+
+h2, h4 {
+  font-family: "Asap", serif;
+  font-optical-sizing: auto;
+  font-weight: 800; 
+  font-style: normal;
+  font-variation-settings: "wdth" 125;
+  font-size: 4em;
+}
+
+p {
+  font-family: "Afacad", sans-serif;
+  font-optical-sizing: auto;
+  font-weight: 500;
+  font-style: normal;
+  font-size: clamp(1.3em, 1.5vw, 1.4em);
+  
+}
+
+/* 
+________________________________________________________
+
+SECTION DEBUT :))))
+________________________________________________________
+
+*/
+@keyframes backgroundAnimStart {
+  0% {
+    background-image: url('images/stadeolympique.jpg');
+  }
+  22% {
+    background-image: url('images/stadeolympique.jpg');
+  }
+  25% {
+    background-image: url('images/biosphere.jpeg');
+  }
+  47% {
+    background-image: url('images/biosphere.jpeg');
+  }
+  50% {
+    background-image: url('images/insectarium.jpg');
+  }
+  72% {
+    background-image: url('images/insectarium.jpg');
+  }
+  75% {
+    background-image: url('images/planetarium.jpg');
+  }
+  97% {
+    background-image: url('images/planetarium.jpg');
+  }
+  100% {
+    background-image: url('images/jardinbotanique.jpeg');
+  }
+}
+
+.accueil_debut {
+  background-size: cover; 
+  background-position: center; 
+  height: 100vh;
+  background-color: var(--couleur-main-accueil-1);
+  background-color: #3a3a3a;
+  background-blend-mode: overlay;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 30%;
+  padding: 10%;
+
+  animation: backgroundAnimStart 30s ease-out infinite;
+}
+
+.accueil_debut .accueil_debut_content {
+  padding: 40px 40px 40px 40px;
+  height: fit-content;
+  max-height: 600px;
+  border-radius: 10px;
+
+  gap: 20px;
+}
+
+.accueil_debut .conteneur2 {
+  padding: 40px 40px 40px 40px;
+  background-color: #dbc7bc;
+}
+
+
+
+
+h1 {
+  font-size: 8vw;
+  font-weight: bolder;
+  color: var(--couleur-main-accueil-1);
+  
+  text-align: left;
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+
+  font-family: "ProximaNovaSoftRegular", "Varela Round", sans-serif;
+  font-weight: 1000;
+  font-style: normal;
+
+  line-height: 0.6;
+
+}
+
+
+#precision_fontsize {
+  font-size: 5vw;
+}
+
+
+.bouton1 {
+  background-color: #F4EFEC;
+  color: #594836;
+
+  font-size: 17px;
+  font-family: "Inter", Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+  border-radius: 16px;
+  padding: 1.1em 1.6em;
+  width: 100%;
+
+  text-align: center;
+  cursor: pointer;
+
+  font-family: "Inter", serif;
+  font-optical-sizing: auto;
+  font-weight: 800;
+  font-style: normal;
+
+  box-shadow: 6px 6px 1px var(--couleur-btn-shadow);
+
+}	
+
+
+.span_bouton_espace {
+  display: flex;
+  flex-flow: column nowrap;
+  align-items: center;
+
+}
+
+
+.accueil_debut_content {
+  display: flex;
+  flex-flow: column nowrap;
+  justify-content: space-between;
+
+}
+
+.accueil_debut div:first-child {
+  height: fit-content;
+
+  display: flex;
+  flex-flow: row nowrap;
+  justify-content: center;
+  align-items: center;
+
+  justify-content: space-between;
+  width: 80vw;
+}
+
+.conteneur2 {
+  display: flex;
+  flex-flow: column nowrap;
+  justify-content: space-between;
+  align-items: center;
+  gap: 40px;
+  border-radius: 10px;
+
+  width: 20vw;
+}
+
+.conteneur2 p {
+  color: var(--couleur-btn-texte);
+}
+
+#description_espace {
+  display: flex;
+  flex-flow: column nowrap;
+  justify-content: center;
+  align-items: flex-start;
+
+  color: white;
+
+  gap: 5vh;
+  width: 40vw;
+}
+
+
+  
+/* 
+________________________________________________________
+
+SECTION QUI SOMMES-NOUS :))))
+________________________________________________________
+
+*/
+
+.accueil_propos {
+  background-color: var(--couleur-main-accueil-1);
+  display: grid;
+  grid-template-columns: 0.7fr 1fr;
+}
+
+.accueil_propos_image img {
+  width: auto;
+  height: 13vw;
+  display: block;
+  margin: 0 auto;
+  border: 7px solid #ece1d5;
+  border-width: 7px 7px 37px 7px;
+  box-shadow: 2px 4px 7px 1px #373431, 8px 12px 0px 4px var(--couleur-main-accueil-2);
+}
+
+.accueil_propos_image figure:first-child img{
+  position: relative;
+  right: 11%;
+  z-index: 1;
+  bottom: 3%;
+  height: 26vh;
+  transform: rotate(-13deg);
+}
+
+.accueil_propos_image figure:first-child figcaption {
+  width: fit-content;
+  position: relative;
+  z-index: 2;
+
+  bottom: 3.5vh;
+  left: 11.5vw;
+
+  transform: rotate(-13deg);
+}
+
+
+.accueil_propos_image figure:nth-child(2) img {
+  position: relative;
+  left: 11%;
+  bottom: 5%;
+  z-index: 1;
+  height: 33vh;
+  transform: rotate(15deg);
+  transform-origin: center;
+}
+.accueil_propos_image figure:nth-child(2) figcaption {
+  width: fit-content;
+  position: relative;
+  z-index: 2;
+
+  left: 19.5vw;
+  bottom: 3.8vh;
+  
+  transform: rotate(15deg);
+  transform-origin: center;
+}
+
+.accueil_propos_image figure:nth-child(3) img {
+  position: relative;
+  z-index: 1;
+  right: 16%;
+  height: 23vh;
+  transform: rotate(-23deg);
+  transform-origin: center;
+}
+.accueil_propos_image figure:nth-child(3) figcaption {
+  width: fit-content;
+  position: relative;
+  z-index: 2;
+
+  bottom: 3.5vh;
+  left: 10vw;
+  
+  transform: rotate(-23deg);
+  transform-origin: center;
+}
+
+.accueil_propos_image figure:nth-child(4) img {
+  position: relative;
+  z-index: 1;
+  right: 16%;
+  height: 15vh;
+  transform: rotate(37deg);
+  transform-origin: center;
+}
+.accueil_propos_image figure:nth-child(4) figcaption {
+  width: fit-content;
+  position: relative;
+  z-index: 2;
+
+  left: 8.3vw;
+  bottom: 4vh;
+  transform: rotate(37deg);
+  transform-origin: center;
+
+  font-size: 1em;
+}
+
+figcaption {
+  font-family: "Caveat", cursive;
+  font-optical-sizing: auto;
+  font-weight: 550;
+  font-style: normal;
+  font-size: 1.22em;
+}
+
+.acceuil_propos_description {
+  display: flex;
+  flex-flow: column wrap;
+  justify-content: center;
+  align-items: flex-end;
+  text-align: right;
+  transform: translate(0%, -13%);
+  gap: 5%;
+  margin: 0% 10% 0% 10%;
+}
+
+
+
+/* 
+________________________________________________________
+
+SECTION EVENEMENT :))))
+________________________________________________________
+
+*/
+
+.accueil_evenement {
+  height: 100vh;
+  background-color: var(--couleur-main-accueil-2);
+  display: grid;
+  grid-template-rows: 0.2fr 1fr;
+  padding: 5% 0% 5% 0%;
+}
+
+.accueil_evenement span {
+  display: flex;
+  flex-flow: column nowrap;
+  align-items: center;
+  justify-content: center;
+  gap: 2%;
+
+  margin-bottom: 10vh;
+  width: 98.6vw;
+}
+
+.accueil_evenement div article > img {
+  width: calc(20vw - 30px);
+  height: auto;
+  margin-bottom: 10px;
+}
+
+.description-evenement {
+  scrollbar-width: thin;
+  scroll-behavior: smooth;
+}
+
+.accueil_evenement article {
+  background-color: #b39380c9;
+  display: flex;
+  flex-flow: column nowrap;
+  align-items: flex-start;
+  
+
+  min-width: 300px;
+  height: 50vh;
+  padding: 15px 15px 15px 15px;
+  text-align: left;
+}
+
+.accueil_evenement article p:nth-child(3) {
+  font-size: 22px;
+  font-weight: bold;
+  margin-top: 15px;
+  margin-bottom: 7px;
+}
+
+.accueil_evenement article p:nth-child(4){
+  margin-bottom: 10px;
+
+}
+.accueil_evenement article p:nth-child(4){
+  margin-bottom: 10px;
+
+}
+
+.description-evenement {
+  font-size: 1em;
+}
+
+.accueil_evenement div {
+  display: flex;
+  flex-flow: row nowrap;
+  justify-content: center;
+  align-items: center;
+  gap: 30px;
+}
+
+
+.description-evenement {
+  scrollbar-width: thin; 
+  scrollbar-color: #786458 #b39380c9; 
+}
+
+.accueil_evenement article {
+  min-width: 310px;
+  max-width: 400px;
+  
+}
+
+.conteneur-scroll.active {
+  cursor: grabbing;
+}
+
+.conteneur-scroll img {
+  display: inline-block; 
+  width: auto; 
+  max-width: 100%; 
+  height: auto; 
+}
+
+.conteneur-scroll article {
+  display: inline-block;
+  vertical-align: top; 
+  min-width: 310px; 
+  max-width: 400px;
+  user-select: none;
+}
+
+.conteneur-scroll {
+  overflow-x: hidden;
+}
+
+
+/* 
+________________________________________________________
+
+SECTION ENFANTS, ENSEIGNER ET FAIRE UN DIFFERENCE :))))
+________________________________________________________
+
+*/
+
+.accueil_autre {
+  background-color: var(--couleur-main-accueil-1);
+
+  display: flex;
+  flex-flow: row nowrap;
+  align-items: center;
+  justify-content: center;
+
+  padding: 5% 10% 5% 10%;
+  gap: 5%;
+  
+}
+
+.accueil_autre article {
+  display: flex;
+  flex-flow: column wrap;
+  align-items: center;
+  justify-content: flex-start;
+
+  width: 20vw;
+}
+
+.accueil_autre h2 {
+  font-size: 2.5em;
+  margin-bottom: 20px;
+  text-align: center;
+}
+
+.accueil_autre article p {
+  font-size: 1.2em;
+  margin-bottom: 50px;
+}
+
+.bouton2 {
+  background-color: #f3a03a;
+  color: #faf1f1;
+
+  font-size: 20px;
+  font-weight: bolder;
+  font-family: "Inter", Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+  border-radius: 35px;
+  padding: 1em 1.8em;
+
+  text-align: center;
+  cursor: pointer;
+}
+
+
+.ligne-verticale {
+  width: 5px;
+  height: 80%; 
+  background-color: #DCC1B0; 
+  border-radius: 10px;
+}
+
+.textMobile {
+  display: none;
+}
+/* 
+________________________________________________________
+
+FOOTER :))))
+________________________________________________________
+*/
+
+footer {
+  display: flex;
+  flex-flow: column nowrap;
+  align-items: flex-start;
+
+  background-color: #EDE4DF;
+  color: #806857ea;
+}	
+
+h4 {
+  font-size: 1.3em;
+  font-weight: bolder;
+  margin-bottom: 10px;
+}
+
+footer p {
+  font-size: 1em;
+}
+
+footer span a {
+  font-family: "Afacad", sans-serif;
+  font-optical-sizing: auto;
+  font-weight: 500;
+  font-style: normal;
+  font-size: clamp(1.3em, 1.5vw, 1.4em);
+  color: #8e7a6cd0;
+}
+
+
+
+#footer_margin {
+  margin: 7vw 7vw 4vw 7vw;
+
+  display: flex;
+  flex-flow: column nowrap;
+  align-items: flex-start;
+  gap: 5vw;
+}
+
+#logo_espace_footer {
+  width: 200px;
+  height: auto;
+}
+
+#footer_ligne1 {
+  display: flex;
+  flex-flow: row nowrap;
+  justify-content: space-between;
+  align-items: center;
+
+  width: 100%;
+}
+
+#footer_conteneur1 {
+  display: flex;
+  flex-flow: column nowrap;
+
+  gap: 10%;
+  margin-left: 1%;
+}
+
+#footer_conteneur1 span {
+  display: flex;
+  flex-flow: row nowrap;
+  align-items: center;
+  gap: 5%;
+
+  margin: 5% 0% 5% 0%;
+}
+
+#footer_conteneur1 a:not(span a) {
+  display: flex;
+  flex-flow: row nowrap;
+  align-items: center;
+
+  gap: 5%;
+
+  
+}
+
+.logo_lien {
+  width: 40px;
+  height: auto;
+  mix-blend-mode: overlay;
+}
+
+#footer_conteneur2 {
+  display: flex;
+  flex-flow: row nowrap;
+  gap: 10%;
+}
+
+#footer_conteneur2 div {
+width: 16vw;
+}
+
+#footer_ligne2 {
+  display: flex;
+  flex-flow: row nowrap;
+  justify-content: space-around;
+
+  gap: 5%;
+}
+
+#footer_ligne2 span {
+  display: flex;
+  flex-flow: column nowrap;
+  align-items: center;
+  gap: 5%;
+}
+
+#footer_ligne2 span p {
+  text-align: center;
+}
+
+
+
+#footer_fin {
+  display: flex;
+  flex-flow: row nowrap;
+  justify-content: space-between;
+  align-items: center;
+
+  width: 97vw;
+  margin: 0% 0vw 0% 2vw;
+  transform: translateX(-5px);
+}
+
+#footer_fin span {
+display: flex;
+flex-flow: row nowrap;
+align-items: center;
+width: 35vw;
+
+gap: 5%;
+
+}
+
+#footer_fin img {
+  width: auto;
+  height: 60px;
+}
+
+footer a	{
+  text-decoration: none;
+}
+
+.icone_footer {
+  width: 20px;
+  height: auto;
+}	
+
+form input[type="submit"] {
+  border-radius: 20px;
+  padding: 10px 20px; 
+  background-color: #C0AB9E; 
+  color: rgb(32, 30, 30); 
+  border: none;
+  cursor: pointer; 
+  position: absolute;
+
+  transform: translateX(-108px) translateY(6px);
+}
+
+form input[type="email"] {
+  border-radius: 25px; 
+  padding: 15px 25px; 
+  border: none; 
+  background-color: #E2D3CA;
+  width: 20vw;
+  box-sizing: border-box; 
+}
+
+legend {
+  font-size: 1em;
+  font-weight: bolder;
+  font-family: "Asap", Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+  margin-bottom: 10px;
+  color: #806857ea;
+}
+
+form {
+  padding-top: 20px;
+}
+
+.footerfin_mobile {
+  display: none !important;
+}
+
+.footerfin_desktop {
+  display: contents;
+}
+
+#footer_conteneur1 a:nth-child(1), #footer_conteneur1 a:nth-child(3), #footer_conteneur1 a:nth-child(5) {
+  color: #322c27ef;
+ }
+ 
+/* 
+___________________________________________________________________________________________________________________________________
+
+MOBILE----------------------------------------------------------------------------------------------------------------------------
+___________________________________________________________________________________________________________________________________
+
+*/
+@media screen and (max-width: 580px) {
+
+    /* 
+    ________________________________________________________
+
+    GENERAL
+    ________________________________________________________
+    */
+    
+    h2 {
+      font-size: 2em;
+      text-align: center;
+    }
+
+
+    /* 
+    ________________________________________________________
+
+    SECTION QUI DEBUT
+    ________________________________________________________
+    */
+
+    .accueil_debut h1 {
+      display: none;
+    }
+
+    .accueil_debut #description_espace {
+      display: none;
+    }
+
+    .accueil_debut div {
+      height: fit-content;
+    }
+
+    .accueil_debut{
+      justify-content: center;
+      align-items: center;
+    }
+
+    .accueil_debut .accueil_debut_content {
+      padding: 0px 0px 0px 0px;
+      width: fit-content;
+    }
+
+    .conteneur2 {
+      width: 75vw;
+      background-color: #F4EFEC
+    }
+
+    /* 
+    ________________________________________________________
+
+    SECTION QUI SOMMES-NOUS
+    ________________________________________________________
+
+    */
+
+    .accueil_propos_image {
+      display: none;
+    }
+
+    .accueil_propos {
+      display: flex;
+      flex-flow: column nowrap;
+      justify-content: center;
+      align-items: center;
+
+      padding: 0% 12% 0% 12%;
+    }
+
+    .acceuil_propos_description {
+      margin: 0;
+      align-items: center;
+      gap: 40px;
+
+      transform: translate(0%, 0%);
+    }
+
+    .acceuil_propos_description p {
+      text-align: left;
+      font-size: 1em;
+    }
+
+
+
+    /* 
+    ________________________________________________________
+
+    SECTION EVENEMENT
+    ________________________________________________________
+
+    */
+
+    .accueil_evenement div article > img {
+      width: 266.36px;
+    }
+
+    .accueil_evenement {
+      padding: 20% 0% 0% 0%;
+      display: flex;
+      flex-flow: column nowrap;
+    }
+
+    .accueil_evenement span {
+      width: 100%;
+    }
+
+    .accueil_evenement span p {
+      padding: 3% 4% 0% 4%;
+      font-size: 0.9em;
+
+      color: #81603cbf;
+    }
+
+    .conteneur-scroll img {
+      min-width: 280px;
+      max-width: 100%; 
+      height: auto; 
+    }
+
+
+    /* 
+    ________________________________________________________
+
+    SECTION ENFANTS, ENSEIGNER ET FAIRE UN DIFFERENCE :))))
+    ________________________________________________________
+
+    */
+    .accueil_autre {
+      display: flex;
+      flex-flow: column nowrap;
+      justify-content: center;
+      align-items: center;
+
+      height: fit-content;
+      width: 100%;
+      padding: 0% 0% 0% 0%;
+    }
+
+    
+
+    .accueil_autre article {
+      width: 100%;
+      height: 80vh;
+
+      padding: 0% 10vw 0% 10vw;
+
+      align-items: center;
+      justify-content: center;
+    }
+
+    .sedocumenter {
+      background-image: url('../images/sedocumenter001.jpg');
+      background-repeat: no-repeat;
+      background-size: cover;
+      background-position: center;
+
+      background-blend-mode: overlay;
+      background-color: #494848;
+    }
+
+    .sedocumenter p, .sedocumenter h2 {
+      color: white;
+    }
+
+    .faireunedifference span {
+      border-radius: 50px;
+    }
+
+    .textDesktop {
+      display: none;
+    }
+
+    .textMobile {
+      display: contents;
+      margin-bottom: 10px;
+      font-size: 1em !important;
+
+      font-weight: 200 !important;
+      line-height: 1.1;
+    }
+
+    .bouton2 {
+      margin-top: 50px;
+    }
+
+    #footer_margin {
+      width: 85vw;
+    }
+
+    #footer_ligne1 {
+      flex-flow: column nowrap;
+      align-items: flex-start;
+
+      width: 98%;
+    }
+
+    #footer_conteneur1 {
+      margin-bottom: 50px;
+      width: 100%;
+    }
+
+    #footer_conteneur2 {
+      width: 100%;
+
+      justify-content: space-around;
+    }
+
+    #footer_conteneur2 div{
+      width: 100%;
+    }
+
+    #footer_conteneur2 a {
+      font-size: 0.8em;
+    }
+
+    #footer_ligne2 {
+      display: flex;
+      flex-flow: row wrap;
+      font-size: 0.8em;
+      width: 85vw;
+      margin-top: 70px;
+      margin-bottom: 50px;
+
+      justify-content: space-around;
+    }
+
+    #footer_ligne2 span {
+      margin-bottom: 35px;
+    }
+
+    #footer_ligne2 h4 {
+      margin-bottom: 2px;
+    }
+
+    #footer_fin {
+      flex-flow: column nowrap;
+      align-items: center;
+      justify-content: center;
+
+      width: 100%;
+      margin: 0% 0vw 30px 0vw;
+    }
+
+    .footerfin_desktop {
+      display: none !important;
+    }
+
+    .footerfin_mobile {
+      display: contents !important;
+      display: flex;
+      flex-flow: column nowrap;
+      align-items: center;
+      justify-content: center;
+      gap: 10px;
+    }
+
+    #footer_fin span {
+      width: 100%;
+      padding: 0% 5% 0% 5%;
+
+      display: flex;
+      flex-flow: row nowrap;
+      align-items: center;
+      justify-content: space-between;
+    }
+
+    #footer_fin p{
+      font-size: 0.85em;
+      color: #0000006d;
+      width: 100%;
+      text-align: center;
+      margin-bottom: 10px;
+    }
+
+    
+    form input[type="email"] {
+      border-radius: 25px; 
+      padding: 15px 25px; 
+      width: 75vw;
+
+    }
+}

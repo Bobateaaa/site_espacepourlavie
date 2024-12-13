@@ -1,0 +1,326 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge"> 
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <meta name="author" content="Matilda Kang">
+    <meta name="description" content="Refonte de la page d'accueil d'Espace pour la vie">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Afacad:ital,wght@0,400..700;1,400..700&family=Asap:ital,wdth,wght@0,125,100..900;1,125,100..900&family=Caveat&family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Varela+Round&display=swap" rel="stylesheet">
+
+    <link rel="stylesheet" href="reset.css" media="screen">
+    <link rel="stylesheet" href="accueil.css" media="screen">
+    <link rel="stylesheet" href="common.css" media="screen">
+
+    <title>Espace Pour La Vie</title>
+</head>
+
+
+<!-- HEADER, navigation... -->
+<header>
+    <img id="logo_espace_nav" src="images/logo_espace.png" alt="">
+    <nav>
+        <span>
+        <a class="accueil_nav" href="">Accueil</a>
+        <a class="biodome_nav" href="">Biodôme</a>
+        <a class="biosphere_nav" href="">Biosphère</a>
+        <a class="insectarium_nav" href="">Insectarium</a>
+        <a class="jardin_nav" href="">Jardin botanique</a>
+        <a class="planetarium_nav" href="">Planétarium</a>
+        </span>
+        <span>
+            <img src="images/magnifier.png" alt="">
+            <img src="images/iconebillet.png" alt="">
+            <p>EN</p>
+        </span>
+
+    </nav>
+</header>
+
+
+
+
+<body>
+    <!-- script js pour le defilement horizontale des images dans la section des evenements -->
+    <script src="horizontalscroll.js"></script>
+
+
+    <!-- premiere section de l'accueil -->
+    <section class="accueil_debut">
+        <div>
+            <div id="description_espace">
+            <h1>ESPACE<br><span id="precision_fontsize">POUR LA VIE</span></h1>
+            <p>Espace pour la vie est un complexe unique à Montréal qui regroupe cinq musées dédiés à la nature et aux sciences : le Biodôme, l’Insectarium, le Jardin botanique, le Planétarium Rio Tinto Alcan et la Biosphère. C'est un lieu 
+            pour explorer et découvrir notre univers à travers des expositions et activités interactives.</p>
+        </div>
+            <div class="accueil_debut_content">
+                <span class="conteneur2">
+                    <p>Réserver et planifier tous les détails de votre visite.</p>
+                    <span class="span_bouton_espace">
+                        <span class="bouton1" id="btn-planifier-accueil-grand">Planifier votre visite</span> 
+                        <br>
+                        <span class="bouton1" id="btn-billet-accueil-grand" >Billeterie</span>
+                    </span>
+                </span>
+            </div>
+        </div>
+    </section>
+
+
+    <!-- section qui sommes-nous de la page d'accueil -->
+    <section class="accueil_propos">
+        <div class="accueil_propos_image">
+            <figure>
+            <img src="images/001.jpg" alt="image de la biodiversité">
+            <figcaption class="titre-photographie">Sculpture du jardin botanique</figcaption>
+            </figure>
+
+            <figure>
+            <img src="images/002.jpg" alt="image de la biodiversité">
+            <figcaption class="titre-photographie">Le stade olympique</figcaption>
+            </figure>
+
+            <figure>
+            <img src="images/003.jpg" alt="image de la biodiversité">
+            <figcaption class="titre-photographie">Un spectacle au planétarium</figcaption>
+            </figure>
+
+            <figure>
+            <img src="images/004.jpg" alt="image de la biodiversité">
+            <figcaption class="titre-photographie">Abeille de l'Insectarium</figcaption>
+            </figure>
+        </div>
+        
+        <div class="acceuil_propos_description">
+            <h2>Qui sommes-nous?</h2>
+            <p>La protection de la biodiversité et de l’environnement est au cœur de la mission d’Espace pour la vie, qui regroupe le Biodôme, la Biosphère, l'Insectarium, le Jardin botanique et le Planétarium. Ensemble, ces musées montréalais forment le plus important complexe en sciences de la nature au Canada.</p> <p>Ils accueillent chaque année plus de 2,4 millions de personnes. Au regard des enjeux auxquels la planète est confrontée, Espace pour la vie travaille à accroître son impact en privilégiant le dialogue avec les communautés et en déployant des actions visant à engager la population sur la voie de la transition socioécologique.</p>
+        </div>
+    </section>
+
+
+    <!-- Section des evenements dans la page d'accueil -->
+    <section class="accueil_evenement">
+        <span>
+            <h2>Événements</h2>
+            <p>Découvrez les événements dans les musées d’Espace pour la vie !</p>
+        </span>
+        <div class="conteneur-scroll">
+            <article>
+                <img src="images/evenement_001.jpg" alt="Frissons d'halloween">
+                <h3>Du 29 septembre au 31 octobre</h3>
+                <p>Frissons d'halloween</p>
+                <p class="description-evenement">l’Halloween s’installe à Espace pour la vie et voilà que la frontière entre le monde de l’irréel et notre monde s’efface! Kalbacius l’ensorceleur en profite pour reprendre le contrôle de la Grande serre du Jardin botanique accompagné de ses créatures fantaisistes mais aussi - surprise ! - de Pétiole, son apprentie, qui doit bientôt décrocher son diplôme d’ensorceleuse.</p>
+            </article>
+
+            <article>
+                <img src="images/evenement_002.jpg" alt="Nuit des chercheuses et des chercheurs">
+                <h3>Le 16 octobre 2024</h3>
+                <p>Nuit des chercheuses et des chercheurs</p>
+                <p class="description-evenement">La 5e édition de la Nuit des chercheuses et des chercheurs arrive à grands pas et, encore cette année, l’équipe d’Espace pour la vie a concocté toute une soirée! Le 15 novembre, de 19 h à minuit, au Planétarium et au Biodôme, les visiteurs et visiteuses vivront l’expérience d’une programmation télévisuelle sortie tout droit des années 2000 – horaire télé inclus!</p>
+            </article>
+
+            <article>
+                <img src="images/evenement_003.jpg" alt="L’observation des Perséides">
+                <h3>Entre le 10 et le 14 août 2025</h3>
+                <p>L’observation des Perséides</p>
+                <p class="description-evenement">À chaque année, vers la mi-août, la Terre repasse tout près de l’orbite de la comète périodique 109P/Swift-Tuttle, dont le sillage est jonché de milliards de particules de poussière qui nous donnent la fameuse pluie de météores des Perséides.</p>
+            </article>
+
+            <article>
+                <img src="images/evenement_004.jpg" alt="Les Butineries - Pollinisateurs en fête">
+                <h3>De 10h à 17h, le 22 et 23 juillet 2025</h3>
+                <p>Les Butineries - Pollinisateurs en fête</p>
+                <p class="description-evenement"> l’Insectarium vous invite à venir butiner d’une activité à l’autre : participez à la plantation d’un nouveau jardin des pollinisateurs, écoutez le son des insectes et aidez-les à polliniser des fleurs grâce à une installation sonore participative en plus de contribuer à la recherche à travers les sciences participatives!</p>
+            </article>
+
+            <article>
+                <img src="images/evenement_005.jpg" alt="Laissez-nous raconter, Le territoire">
+                <h3>De 10 h 30 à midi, 21 juin 2024</h3>
+                <p>Laissez-nous raconter</p>
+                <p class="description-evenement"> Une exposition de photos et de capsules audios mise en valeur le long des sentiers verdoyants du Jardin des Premières-Nations au Jardin botanique. Cette galerie à ciel ouvert trace les liens intimes entre territoire et transmission, racontés par les Premières Nations et les Inuit. Un territoire immense et partagé entre Nations, le cœur battant de leurs identités, de leurs croyances et traditions.</p>
+            </article>
+
+            <article>
+                <img src="images/evenement_006.jpg" alt="ASTROFEST">
+                <h3>De 9h à minuit, le 23 mai 2025</h3>
+                <p>ASTROFEST</p>
+                <p class="description-evenement">Epace pour la vie célèbre l’astronomie le 3 juin prochain avec l’Astrofest, le rendez-vous annuel du Planétarium. Cette année, l’équipe vous propose de venir décrocher la Lune : bricolage pour tous les âges, exposition d’astrophotographie, kiosques d’informations, ateliers dirigés ou encore observation du Soleil en journée et soirée observation de la Lune avec guimauves, etc.</p>
+            </article>
+
+            <article>
+                <img src="images/evenement_007.jpg" alt="Rendez-vous horticole">
+                <h3> le 8 mai 2024 - Du 24 au 26 mai 2025</h3>
+                <p>Rendez-vous horticole</p>
+                <p class="description-evenement"> Depuis maintenant 27 ans, le Rendez-vous horticole sème l’envie de jardiner. Cette année, rencontrez des gens passionnés de plantes, procurez-vous des végétaux, découvrez de nouvelles saveurs à cultiver et à déguster, et apprenez des trucs pour soutenir la transition socioécologique par le jardinage.</p>
+            </article>
+
+            <article>
+                <img src="images/evenement_008.jpg" alt="Exposition Zéro">
+                <h3>Le 15 janvier du 4 avril 2025</h3>
+                <p>Exposition Zéro</p>
+                <p class="description-evenement">Cette exposition collective vise à utiliser l’art pour sensibiliser le public aux changements écoresponsable. Dix artistes et collectifs de disciplines variées sont réunis afin de faire vivre la recherche différemment, de rejoindre un plus large public et de susciter un changement durable des comportements écoresponsables.</p>
+
+            </article>
+
+            <article>
+                <img src="images/evenement_009.jpg" alt="Jardins de lumière">
+                <h3>31 août au 31 octobre 2024</h3>
+                <p>Jardins de lumière</p>
+                <p class="description-evenement">Pour sa 12e édition, Jardins de lumière a repensé la mise en lumière du Jardin japonais et propose une Légende des amants papillon au Jardin de Chine dans une version multimédias féérique.</p>
+
+            </article>
+
+            <article>
+                <img src="images/evenement_010.jpg" alt="Des saveurs botaniques">
+                <h3>22 juin au 02 septembre 2024</h3>
+                <p>Des saveurs botaniques</p>
+                <p class="description-evenement">Tout l’été, cultivez la gourmandise écoresponsable à travers des activités ludiques. Au menu : apprenez à réduire le gaspillage alimentaire et dégustez des végétaux aux saveurs étonnantes pendant que les jeunes enfants s'amusent à jouer à cuisiner à l’aire de jeux.</p>
+
+            </article>
+
+            <article>
+                <img src="images/evenement_011.jpg" alt="L’Expédition végétale">
+                <h3>Du 20 au 24 juillet 2025</h3>
+                <p>L’Expédition végétale</p>
+                <p class="description-evenement">La direction du Jardin a appris qu’une équipe de chercheurs bien particulière, celle des « scientifiques » de L’Expédition végétale, s’intéresse aux plantes indigènes ainsi qu’à leurs propriétés phytovoltaïques (capacité à produire de l’énergie) et souhaite mener des recherches sur le site du Jardin botanique cet été.</p>
+            </article>
+
+            <article>
+                <img src="images/evenement_012.jpg" alt="ROUGE 2100 - Une aventure martienne">
+                <h3>01 novembre 2024 au 30 juin 2025</h3>
+                <p>ROUGE 2100 - Une aventure martienne</p>
+                <p class="description-evenement">Dans cette odyssée tant artistique que scientifique, votre excursion vers Mars à destination d’une base fictive au sommet du mont Olympus saura vous démontrer la passion et l’infinie curiosité de l’humanité pour l’exploration.</p>
+
+            </article>
+        </div>
+    </section>
+
+    <!-- Section avec les sections enfants et enseignant, se documenter et faire une difference -->
+    <section class="accueil_autre">
+        <article>
+            <h2>La pédagogie</h2>
+            <p class="textDesktop">Un espace pour enfants et enseignants où l'apprentissage devient une aventure ! Découvrez des ressources pédagogiques et des activités interactives pour explorer la science et la nature de manière ludique et enrichissante.</p>
+            <p class="textMobile"><strong>Envie d’en apprendre plus sur le monde qui nous entoure ?</strong><br>
+
+                Espace pour la vie offre une multitude de programmes éducatifs pour les enfants qui désirent découvrir le nature autant à la maison qu’à l’école! Un espace où l'apprentissage devient une aventure ! Découvrez des ressources pédagogiques et des activités interactives pour explorer la science et la nature de manière ludique et enrichissante. </p>
+
+            <span class="bouton2">Partez à l’aventure!</span>
+        </article>
+
+        <div class="ligne-verticale"></div>
+
+        <article class="sedocumenter">
+            <h2>Se documenter</h2>
+            <p class="textDesktop">Plongez dans l'exploration de nos musées et de leurs sciences. À travers des articles et ressources thématiques, enrichissez vos connaissances sur la biologie, la nature, l’espace et plus encore. Que vous soyez curieux ou passionné, cet espace vous invite à approfondir votre compréhension du monde.</p>
+            <p class="textMobile">Plongez dans la découverte de nos musées et des sciences qui les animent. Explorez des sujets comme la biologie, la nature, les insectes, l’espace et l’environnement à travers des articles et des ressources soigneusement sélectionnées. Que vous soyez curieux ou passionné, cet espace vous offre des contenus clairs et captivants pour enrichir vos connaissances et explorer les mystères de la science et les merveilles de l’univers.</p>
+            <span class="bouton2">Documentez-vous</span>
+        </article>
+
+        <div class="ligne-verticale"></div>
+
+        <article id="faireunedifference">
+            <h2>Faire un difference</h2>
+            <p class="textDesktop">Faites une différence avec Espace pour la vie ! Que ce soit par le bénévolat, les dons ou la participation à des événements, chaque geste compte pour soutenir la biodiversité et l’environnement. Ensemble, renforçons notre impact positif.</p>
+            <p class="textMobile">Participez à notre mission et faites une différence ! Découvrez comment vous impliquer dans la protection de la biodiversité et de l’environnement à Espace pour la vie. Que ce soit par le bénévolat, les dons ou en participant à des événements, chaque action compte. En collaborant avec nous, vous aidez à sensibiliser la communauté aux enjeux écologiques et à prendre des initiatives pour une transition vers un avenir plus durable.</p>
+            <span class="bouton2">S'impliquer maintenant!</span>
+        </article>
+    </section>
+</body>
+
+
+<!-- FOOTER de la page -->
+<footer>
+    <div id="footer_margin">
+        <img id="logo_espace_footer" src="images/logo_espace.png" alt="logo espace pour la vie Montréal">
+
+        <div id="footer_ligne1">
+            <div id="footer_conteneur1">
+                <a href=""><img class="icone_footer" src="images/footer_help.png" alt="">FAQ</a><br>
+                <a href=""><img class="icone_footer" src="images/footer_mail.png" alt="">Nous écrire</a><br>
+                <a href=""><img class="icone_footer" src="images/footer_telephone.png" alt="">(514)-868-300</a>
+                <span>
+                    <a href="https://www.facebook.com/Espacepourlavie/?locale=fr_CA"><img class="logo_lien" src="images/icons8-facebook-64.png" alt=""></a>
+                    <a href="https://x.com/espacepourlavie?lang=fr_CA"><img class="logo_lien" src="images/twitter.png" alt=""></a>
+                    <a href="https://www.youtube.com/c/EspacepourlavieMontr%C3%A9al"><img class="logo_lien" src="images/youtube.png" alt=""></a>
+                    <a href="https://www.instagram.com/espacepourlavie/"><img class="logo_lien" src="images/instagram.png" alt=""></a>
+                </span>
+                <form action="soumettre">
+                    <legend>Infolettre</legend>
+                    <input type="email" name="email" id="email" placeholder="Votre courriel">
+                    <input type="submit" value="S'abonner">
+                </form>
+            </div>
+            <span id="footer_conteneur2">
+                <div>
+                    <h4>Visite</h4>
+                    <a href="">Billeterie</a> <br>
+                    <a href="">Heures d'ouverture</a><br>
+                    <a href="">Tarifs</a><br>
+                    <a href="">Accès</a><br>
+                    <a href="">Calendrier d'activités</a>
+                </div>
+                <div>
+                    <h4>Service</h4>
+                    <a href="">Photographie et tournage</a><br>
+                    <a href="">Location des salles</a><br>
+                    <a href="">Groupes et organisateur de voyage</a>
+                </div>
+                <div>
+                    <h4>À propos</h4>
+                    <a href="">Demande de salon et billets de faveur</a><br>
+                    <a href="">Fondation espace pour la vie</a><br>
+                    <a href="">Médias</a><br>
+                    <a href="">Carrières</a>
+                </div>
+            </span>
+        </div>
+
+        <div id="footer_ligne2">
+            <span>
+                <h4>Biodôme</h4>
+                <p>4777, avenue Pierre-De Coubertin, Montréal, (QC) H1V 1B3</p>
+            </span>
+            <span>
+                <h4>Biosphère</h4>
+                <p>160, chemin du Tour-de-l'isle, Montréal, (QC) H3C 4G8</p>
+            </span>
+            <span>
+                <h4>Insectarium</h4>
+                <p>4581, rue Sherbrooke Est, Montréal, (QC) H1X 2B2</p>
+            </span>
+            <span>
+                <h4>Jardin Botanique</h4>
+                <p>4101, rue Sherbrooke Est, Montréal, (QC) H1X 2B2</p>
+            </span>
+            <span>
+                <h4>Planétarium</h4>
+                <p>4801, avenue Pierre-de Coubertin, Montréal, (QC) H1V 3V4</p>
+            </span>
+        </div>
+    </div>  
+
+    <div id="footer_fin" class="footerfin_desktop">
+        <img src="images/logo_communautémontreal.png" alt="">
+        <span> 
+            <p>Français | Fichiers témoins | ©Tous droits réservés, Ville de Montréal</p>
+            <img src="images/logo_montreal.png" alt="">
+        </span>
+    </div>
+
+    <div id="footer_fin" class="footerfin_mobile" >
+        <span>
+            <img src="images/logo_communautémontreal.png" alt="">
+            <img src="images/logo_montreal.png" alt="">
+        </span>
+        <p>Français | Fichiers témoins | ©Tous droits réservés, Ville de Montréal</p>
+    </div>
+    
+</footer>
+    
+
+
+</html>

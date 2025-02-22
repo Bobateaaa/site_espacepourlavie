@@ -1,14 +1,184 @@
 @charset "utf-8";
 
+
+/* 
+
+Partie qui sont communes à toutes les pages
+________________________________________________________
+
+NAVIGATION
+________________________________________________________
+*/
+
+header a {
+  font-family: "Inter", sans-serif;
+  font-optical-sizing: auto;
+  font-weight: 600;
+  font-style: normal;
+  font-size: clamp(0.5em, 1.2vw, 0.9em);
+  color: #74583a;
+  text-decoration: none;
+}
+
 nav {
-position: fixed;
+  display: flex;
+  flex-flow: row nowrap;
+  background-color: #F4EFEC;
+  padding: 0 2%;
+  position: fixed;
+  width: 100%;
+  z-index: 10;
+  gap: 10vw;
+  align-items: center;
+  justify-content: space-between;
+}
+
+nav span {
+  display: flex;
+  flex-flow: row nowrap;
+  height: 8vh;
+  gap: 50px;
+}
+
+nav span a {
+  display: flex;
+  flex-flow: column nowrap;
+  align-items: center;
+  justify-content: center;
+  height: 100%;
+  flex-grow: 1;
+  transition: color 0.3s ease, text-shadow 0.3s ease;
+
+  font-family: "ProximaNovaSoftRegular", "Varela Round", sans-serif;
+}
+
+
+nav div{
+  gap: 20px;
+  opacity: 0.5;
 
   display: flex;
   flex-flow: row nowrap;
-  justify-content: space-between;
   align-items: center;
-  padding: 1rem 10rem;
-  background-color: rgb(38, 38, 38);
-  z-index: 5;
-  width: 100%;
+  justify-content: center;
+}
+
+nav div img {
+  width: 25px;
+  height: auto;
+
+  cursor: pointer;
+}
+
+nav div img:hover {
+  transform: scale(1.1); 
+  opacity: 0.4; 
+}
+
+nav div img:nth-child(2) {
+  width: 35px;
+  height: auto;
+}
+
+nav div p {
+  font-size: 35px;
+  user-select: none;
+  cursor: pointer;
+}
+
+nav div p:hover {
+  color: #655946; 
+  transform: scale(1.1); 
+}
+
+.jardin_nav {
+  white-space: nowrap;
+}
+
+#logo_espace_nav {
+  width: 150px;
+  height: auto;
+}
+
+
+/* Animation pour les liens de la navigation*/
+.accueil_nav:hover {
+  color: #8d704b;
+  text-shadow: 0 0 29px rgba(210, 180, 140, 1),
+               0 0 39px rgba(210, 180, 140, 0.9),
+               0 0 55px rgba(210, 180, 140, 0.8);
+}
+
+.accueil_nav:hover {
+  color: #8d704b; 
+  text-shadow: 0 0 29px rgba(210, 180, 140, 1),
+               0 0 39px rgba(210, 180, 140, 0.9),
+               0 0 55px rgba(210, 180, 140, 0.8);
+}
+
+.biodome_nav:hover{
+  color: #2db1e5;
+  text-shadow: 0 0 29px rgb(58, 186, 237), 
+               0 0 39px rgba(82, 174, 210, 0.6), 
+               0 0 55px rgba(58, 187, 237, 0.4); 
+}
+
+.biosphere_nav:hover {
+  color: #00879E;
+  text-shadow: 0 0 29px rgba(0, 135, 158), 
+               0 0 39px rgba(0, 135, 158, 0.6), 
+               0 0 55px rgba(0, 135, 158, 0.4); 
+}
+
+.insectarium_nav:hover {
+  color: #E84C2E;
+  text-shadow: 0 0 29px rgba(232, 76, 46), 
+               0 0 39px rgba(232, 76, 46, 0.6),
+               0 0 55px rgba(232, 76, 46, 0.4); 
+}
+
+.jardin_nav:hover {
+  color: #42B876;
+  text-shadow: 0 0 29px rgba(66, 184, 118, 0.8), 
+               0 0 39px rgba(66, 184, 118, 0.6), 
+               0 0 55px rgba(66, 184, 118, 0.4); 
+}
+
+.planetarium_nav:hover {
+  color: #282992;
+  text-shadow: 0 0 29px rgba(40, 41, 146, 0.8),
+               0 0 39px rgba(40, 41, 146, 0.6), 
+               0 0 55px rgba(40, 41, 146, 0.4); 
+}
+#menuburger {
+  display: none;
+}
+
+    /* 
+    ________________________________________________________
+
+    NAV VERSION MOBILE
+    ________________________________________________________
+
+    */
+
+@media screen and (max-width: 580px) {
+  nav span, nav div, nav p, nav img:not(#logo_espace_nav):not(#menuburger) {
+    display: none;
+  }
+
+  header {
+    background-color: #F4EFEC;
+  }
+
+  #menuburger {
+    width: 50px;
+    height: auto;
+    display: flex;
+    opacity: 0.6;
+    display: content;
+    cursor: grab;
+  }
+
+
 }
